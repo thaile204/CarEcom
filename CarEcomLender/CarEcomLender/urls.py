@@ -19,6 +19,7 @@ from django.views.generic import TemplateView
 
 urlpatterns = [
     path('', TemplateView.as_view(template_name="social_app/index.html")),
+    path('user', include('social_app.urls')),
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls'))
 ]

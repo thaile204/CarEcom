@@ -39,11 +39,12 @@ INSTALLED_APPS = [
      'django.contrib.staticfiles',
      'django.contrib.sites',   # <--
      'social_app',   # <--
-
+     # 'social_app.apps.SocialAppConfig',
      'allauth',   # <--
      'allauth.account',   # <--
      'allauth.socialaccount',   # <--
      'allauth.socialaccount.providers.google',   # <--
+     'rest_framework'
 ]
 
 MIDDLEWARE = [
@@ -139,4 +140,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 SITE_ID = 2
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/user/api/user/'
